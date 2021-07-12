@@ -1,0 +1,55 @@
+%%% Template para anotações de aula
+%%% Feito por Willian, com base no template de  Mikhail Klassen
+
+\documentclass[12pt,a4paper, brazil]{article}
+
+%%%%%%% INFORMAÇÕES DO CABEÇALHO
+\newcommand{\workingDate}{\textsc{\selectlanguage{portuguese}\today}}
+\newcommand{\userName}{Cód. da matéria}
+\newcommand{\institution}{UTFPR-PB}
+\usepackage{researchdiary_png}
+
+\begin{document}
+
+\title{Anotações\ da\ aula}
+%% {\large \today}\\[5mm] %% se quiser colocar data
+
+\section*{Template para anotações de aula}
+
+\subsection*{Aula 1}
+
+
+%% para citar no texto, use \textcite{citacao} para ficar no formato Fulano (Ano), ou use \cite{citacao} para citar  no formato (FULANO, Ano)
+Segundo \textcite{citacao-exemplo}, \lipsum[66] \cite{citacao-exemplo}
+
+\par
+Para equações, listas, etc., basta usar os environments padrão do LaTeX.
+
+\begin{equation}
+a^2 = b^2 + c^2
+\end{equation}
+onde $a$, $b$ e $c$ são lados de um triângulo retângulo........
+
+\subsubsection*{Subseção da aula 1}
+
+\lipsum[66]
+
+\myparagraph{Parágrafo da subseção da aula 1}
+\lipsum[66]
+\par A \autoref{fig:exemplo} é uma imagem......
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Figura exemplo}
+    \includegraphics[width=0.5\textwidth]{logo_utf.png}
+    \caption*{Fonte: Autoria própria.} %% isso é levemente uma gambiarra, mas funciona para o propósito desse template.
+    \label{fig:exemplo}
+\end{figure}
+
+\mysubparagraph{Subparágrafo da subseção da aula 1}
+\lipsum[66]
+
+%%% as referências devem estar em formato bibTeX no arquivo referencias.bib
+\printbibliography
+
+\end{document}
